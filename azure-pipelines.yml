@@ -17,5 +17,9 @@ steps:
 
 - script: |
     npm install --legacy-peer-deps
+- script: |
+    echo "NODE_ENV=production" > .env
+  displayName: 'Create environment file'
+- script: |
     npm run build
   displayName: 'Install dependencies'
